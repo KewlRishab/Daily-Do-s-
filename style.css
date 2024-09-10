@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=SUSE:wght@100..800&display=swap');
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    ul li {
+        font-size: 15px;
+    }
+    button#Add {
+        padding: 14px 30px;
+    }
+}
+
+* {
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #eaff9d, rgba(80, 124, 151, 0.467));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 42px;
+    color: #a792fa;
+    margin: 0;
+    z-index: 10;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 40px 30px 70px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.App h2 {
+    color: #64648c;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.App h2 img {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    max-width: 80%;
+}
+
+button#Add {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+}
+
+button#Add:hover {
+    background: #e0483a;
+}
+
+ul {
+    max-height: calc(90vh - 190px);
+    overflow-y: auto;
+    padding-right: 10px; /* To accommodate scrollbar space */
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling for long tasks */
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: space-between; /* Space between text and buttons */
+}
+
+ul li.checked {
+    color: #c0a7a7;
+}
+
+ul li.checked button {
+    color: inherit; /* Keep the original color for the button */
+    text-decoration: none; /* Prevent line-through on the button */
+}
+
+ul li button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+    flex-shrink: 0;
+}
+
+ul li .buttons {
+    display: flex; /* Makes a flex container for the buttons */
+    align-items: center; /* Align buttons vertically */
+}
+
+ul li button:hover {
+    background:#c8d0e1;
+    border-radius:50%; /* Change color on hover for buttons */
+}
+
+ul li::before {
+    content: ' ';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(../images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+ul li.checked::before {
+    background-image: url(../images/checked.png);
+}
