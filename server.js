@@ -31,9 +31,10 @@
             saveTask();
         }
         else if (e.target.textContent === "📝" && chk=== true && window.confirm("Are you sure you want to edit this Do?")) {
-            const taskText = e.target.parentElement.childNodes[0].textContent; 
+            const parentEl = e.target.parentElement.parentElement;
+            const taskText= parentEl.firstChild.textContent; 
             input.value = taskText;
-            e.target.parentElement.remove(); 
+            parentEl.remove();
             saveTask();
             alert('Please Edit it from the input field!');
         }
