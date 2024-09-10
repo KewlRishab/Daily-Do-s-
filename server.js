@@ -40,7 +40,7 @@
         }
         else if(e.target.textContent === "📝" && chk=== false) alert("You can't edit a task which is completed");
         else if (e.target.textContent === "\u00d7" && window.confirm("Are you sure you want to delete this Do?")) {
-            e.target.parentElement.remove();
+            e.target.parentElement.parentElement.remove();
             saveTask(); 
             alert("Do successfully Deleted");
         }
