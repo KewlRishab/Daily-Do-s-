@@ -1,5 +1,6 @@
 # Daily-Do-s-
 This is Task accessing app in which you can CRUD operations on tasks and systemize your living!!
+# Deploy Link:->  https://daily-do-s.vercel.app/
 # Screenshots of the same!
 ``![Screenshot (129)](https://github.com/user-attachments/assets/5db9d4f4-9684-405e-9cd4-dfba37a65b69)
 
